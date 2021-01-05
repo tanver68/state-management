@@ -6,7 +6,7 @@ const Categories = (props) => {
     return (
         <div>
             <h2>This is categories</h2>
-            <CategoriesDetails count={count}></CategoriesDetails>
+            <CategoriesDetails></CategoriesDetails>
         </div>
     );
 };
