@@ -5,17 +5,17 @@ import Home from './Component/Home/Home';
 import Shipment from './Component/Shipment/Shipment';
 import { createContext, useState } from 'react';
 
-export const CategoriesContext = createContext(); //akta context create korlam tarpor pura areatak context provider(CategoriesContext.Provider) ar vitore rekhe dece and tar akta value dece (laptop)
+export const CategoriesContext = createContext(); //akta context create korlam tarpor pura areatak context provider(CategoriesContext.Provider) ar vitore rekhe dece and tar akta value dece (laptop) provider er value akadhik set kora jay array akareo set kora jay
 
 function App() {
-  const [count,setCount] = useState(0)
+  const [category,setCategory] = useState(0)
   return (
-    <CategoriesContext.Provider value={count}> 
+    <CategoriesContext.Provider value={[category,setCategory]}> 
       <header className="App-header">
-        <p>count value: {count}</p>
-        <Header count={count} setCount={setCount}></Header>
-        <Home count = {count}></Home>
-        <Shipment ccc={count}></Shipment>
+        <p>count value: {category}</p>
+        <Header  ></Header>
+        <Home ></Home>
+        <Shipment></Shipment>
         {/* app.js a lokho kora jay shipmant e ccc name e akta variable declear kora same variable shipmant.js s props recive korbe */}
       </header>
     </CategoriesContext.Provider>
