@@ -8,7 +8,7 @@ import { createContext, useState } from 'react';
 export const CategoriesContext = createContext(); //akta context create korlam tarpor pura areatak context provider(CategoriesContext.Provider) ar vitore rekhe dece and tar akta value dece (laptop) provider er value akadhik set kora jay array akareo set kora jay
 
 function App() {
-  const [category,setCategory] = useState(0)
+  const [category,setCategory] = useState('laptop')
   return (
     <CategoriesContext.Provider value={[category,setCategory]}> 
       <header className="App-header">
